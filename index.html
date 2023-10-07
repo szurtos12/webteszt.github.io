@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Professzionális weboldal</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #4B0082, #6200ea); /* Sötétlilább háttérszín */
+            user-select: none; /* Ne lehessen semmit sem kijelölni */
+            animation: backgroundAnimation 15s linear infinite;
+        }
+        @keyframes backgroundAnimation {
+            0% {
+                filter: brightness(100%);
+                transform: scale(1);
+            }
+            50% {
+                filter: brightness(110%);
+                transform: scale(1.05);
+            }
+            100% {
+                filter: brightness(100%);
+                transform: scale(1);
+            }
+        }
+        .container {
+            text-align: center;
+        }
+        .box {
+            background: linear-gradient(90deg, #4B0082, #6200ea); /* Színátmenetes lila animáció a háttérnek */
+            padding: 7%;
+            border-radius: 25px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            width: 95%;
+            max-width: 1000px;
+        }
+        .neon-text {
+            color: #f0f;
+            text-shadow: 0 0 20px #f0f, 0 0 40px #f0f, 0 0 60px #f0f;
+            font-size: 70px;
+            font-family: 'Arial', sans-serif;
+            animation: textGlow 2s ease-in-out infinite alternate;
+        }
+        @keyframes textGlow {
+            0% {
+                text-shadow: 0 0 20px #f0f, 0 0 40px #f0f, 0 0 60px #f0f;
+            }
+            100% {
+                text-shadow: 0 0 30px #f0f, 0 0 60px #f0f, 0 0 90px #f0f;
+            }
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .button {
+            background: #4B0082; /* Sötétlila háttér a gomboknak */
+            color: #f0f;
+            padding: 20px 50px;
+            margin: 10px;
+            border: none;
+            border-radius: 25px; /* Ovális forma a gomboknak */
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s, transform 0.3s, text-shadow 0.3s;
+            font-family: 'Arial', sans-serif;
+            user-select: none;
+            animation: buttonPulse 2s ease-in-out infinite alternate;
+        }
+        @keyframes buttonPulse {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.05);
+            }
+        }
+        .button:hover {
+            background: #6200ea; /* Színváltozás az egér fölötti állapotban */
+            color: #f0f;
+            text-shadow: 0 0 20px #f0f, 0 0 40px #f0f, 0 0 60px #f0f;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1 class="neon-text">Üdvözöljük</h1>
+            <p class="neon-text">Weboldal</p>
+            <div class="button-container">
+                <button class="button">Lépjen be</button>
+                <button class="button">Tudj meg többet</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
